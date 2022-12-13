@@ -5,6 +5,8 @@ import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
 import { getUserAction, clearUserStore, headerRequest } from '../../actions/actionCreator';
 
+
+
 class Header extends React.Component {
   componentDidMount() {
     if (!this.props.data) {
@@ -45,14 +47,14 @@ class Header extends React.Component {
                 <li><Link to="/account" style={{ textDecoration: 'none' }}><span>My Account</span></Link></li>
                 <li>
                   <Link
-                    to="http:/www.google.com"
+                    to="#"
                     style={{ textDecoration: 'none' }}
                   >
                     <span>Messages</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="http:/www.google.com" style={{ textDecoration: 'none' }}><span>Affiliate Dashboard</span></Link>
+                  <Link to="#" style={{ textDecoration: 'none' }}><span>Affiliate Dashboard</span></Link>
                 </li>
                 <li><span onClick={this.logOut}>Logout</span></li>
               </ul>
@@ -95,7 +97,7 @@ class Header extends React.Component {
             </div>
           </div>
           <div className={styles.navContainer}>
-            <a href='https://squadhelp.com'><img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt="blue_logo" href=''/></a>
+            <Link to={'../../pages/Home/Home'}><img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt="blue_logo" href=''/></Link>
             <div className={styles.leftNav}>
               <div className={styles.nav}>
                 <ul>

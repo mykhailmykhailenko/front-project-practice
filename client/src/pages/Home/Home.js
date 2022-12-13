@@ -9,6 +9,7 @@ import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
 import Contacts from '../../components/Contacts';
+import DashboardBrand from '../../components/DashboardBrand';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
@@ -216,6 +217,7 @@ const Home = (props) => {
               />
             </div>
           </div>
+          <DashboardBrand />
           <Footer />
         </>
       )}
